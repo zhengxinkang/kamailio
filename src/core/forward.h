@@ -124,6 +124,7 @@ static inline int msg_send_buffer(
 	str outb;
 	sr_net_info_t netinfo;
 	sr_event_param_t evp = {0};
+	int ret;
 
 #ifdef USE_TCP
 	int port;
@@ -132,7 +133,6 @@ static inline int msg_send_buffer(
 	union sockaddr_union local_addr;
 	struct tcp_connection *con = NULL;
 	struct ws_event_info wsev;
-	int ret;
 #endif
 
 	outb.s = buf;

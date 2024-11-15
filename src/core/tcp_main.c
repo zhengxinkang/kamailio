@@ -1723,8 +1723,10 @@ struct tcp_connection *_tcpconn_find(int id, struct ip_addr *ip, int port,
 			print_ip("ip=", &c->rcv.src_ip, "\n");
 #endif
 			if((id == c->id) && (c->state != S_CONN_BAD)) {
+#ifdef EXTRA_DEBUG
 				LM_DBG("found connection by id: %d\n", id);
 				return c;
+#endif
 			}
 		}
 	} else if(likely(ip)) {

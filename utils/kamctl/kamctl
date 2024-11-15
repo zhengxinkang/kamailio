@@ -620,10 +620,10 @@ AS 'SIP-ID' FROM $DA_TABLE $CLAUSE ; "
 			TMP_OSERDOMAIN=$OSERDOMAIN
 			set_user $2
 
-			if is_value_in_db $DA_TABLE $DA_ALIAS_USER_COLUMN $TMP_OSERUSER; then
-				minfo "$TMP_OSERUSER alias already in $DA_TABLE table"
-				exit 0
-			fi
+			# if is_value_in_db $DA_TABLE $DA_ALIAS_USER_COLUMN $TMP_OSERUSER; then
+			# 	minfo "$TMP_OSERUSER alias already in $DA_TABLE table"
+			# 	exit 0
+			# fi
 
 			QUERY="INSERT INTO $DA_TABLE ($DA_USER_COLUMN,$DA_DOMAIN_COLUMN,\
 $DA_ALIAS_USER_COLUMN,$DA_ALIAS_DOMAIN_COLUMN) VALUES ('$OSERUSER',\

@@ -179,7 +179,7 @@ static cmd_export_t cmds[] = {
 	{"is_supported", (cmd_function)w_is_supported, 1, fixup_option, 0,
 			ANY_ROUTE},
 	{"is_first_hop", (cmd_function)w_is_first_hop, 0, 0, 0, ANY_ROUTE},
-	{"is_first_hop", (cmd_function)w_is_first_hop, 1, fixup_igp_null,
+	{"is_first_hop", (cmd_function)w_is_first_hop_mode, 1, fixup_igp_null,
 			fixup_free_igp_null, ANY_ROUTE},
 	{"is_tel_number", (cmd_function)is_tel_number, 1, fixup_spve_null, 0,
 			ANY_ROUTE},
